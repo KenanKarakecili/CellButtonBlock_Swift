@@ -4,7 +4,7 @@ It's very often we add a button in a UITableViewCell.
 
 But handling its action is not so handy.
 
-So I decided to write a handler class that can store every cell button and its action in UITableViewCells.
+So I decided to write a handler class that can store every cell button and its action of the UITableViewCells.
 ```
 class CellButtonBlock {
   

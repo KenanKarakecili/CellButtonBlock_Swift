@@ -26,3 +26,24 @@ class KKCellButtonBlock {
   
 }
 ```
+
+#Usage
+
+Step1:
+Create an instance in ViewController class.
+
+```
+let cellButtonBlock = KKCellButtonBlock()
+```
+
+Step2:
+In UITableView's cellForRow method, add your action inside the closure.
+```
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  let cell ...
+  cellButtonBlock.setActionForButton(cell!.cellApproveButton) { () in
+    self.anAction()
+  }
+  return cell
+}
+```

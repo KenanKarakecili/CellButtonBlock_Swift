@@ -47,3 +47,8 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
   return cell
 }
 ```
+
+It simply holds the button's action with its memory referance in an array.
+When the button is triggered, it calls finds the assigned action and perform it.
+
+Enjoy coding.. :]

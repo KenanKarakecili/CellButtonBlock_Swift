@@ -33,7 +33,7 @@ class CellButtonBlock {
 Create an instance in ViewController class.
 
 ```
-let cellButtonBlock = KKCellButtonBlock()
+let cellButtonBlock = CellButtonBlock()
 ```
 
 ######Step2:

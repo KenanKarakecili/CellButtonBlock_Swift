@@ -8,9 +8,9 @@ So I decided to write a handler class that can store every cell button and its a
 ```
 class KKCellButtonBlock {
   
-  var actionDic: [String: (Void -> Void)] = [:]
+  var actionDic: [String: Void -> Void] = [:]
   
-  func setActionForButton(button: UIButton, action: (Void -> Void)) {
+  func setActionForButton(button: UIButton, action: Void -> Void) {
     let uniqueId = "\(unsafeAddressOf(button))"
     actionDic[uniqueId] = action
     button.addTarget(self, action: #selector(didTapButton(_:)), forControlEvents: .TouchUpInside)
@@ -19,8 +19,8 @@ class KKCellButtonBlock {
   @objc func didTapButton(sender: UIButton) {
     let uniqueId = "\(unsafeAddressOf(sender))"
     let action = actionDic[uniqueId]
-    if action != nil {
-      action!()
+    if let myAction = action {
+      myAction()
     }
   }
   

@@ -1,4 +1,4 @@
-# CellButtonBlock_Swift
+# KKCellButtonBlock_Swift
 
 It's very often we add a button in a UITableViewCell.
 
@@ -6,7 +6,7 @@ But handling its action is not so handy.
 
 So I decided to write a handler class that can store every cell button and its action of the UITableViewCells.
 ```
-class CellButtonBlock {
+class KKCellButtonBlock {
   
   var actionDic: [String: Void -> Void] = [:]
   
@@ -33,7 +33,7 @@ class CellButtonBlock {
 Create an instance in ViewController class.
 
 ```
-let cellButtonBlock = CellButtonBlock()
+let cellButtonBlock = KKCellButtonBlock()
 ```
 
 ######Step2:
